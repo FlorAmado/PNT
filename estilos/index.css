@@ -1,0 +1,483 @@
+/* Variables globales */
+:root {
+    --puma-black: #1D1D1D;
+    --puma-white: #FFFFFF;
+    --puma-gray: #F5F5F5;
+    --puma-light-gray: #E5E5E5;
+    --puma-red: #FF0000;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Banner superior */
+.top-banner {
+    background-color: var(--puma-white);
+    color: var(--puma-black);
+    text-align: center;
+    padding: 8px 0;
+    font-size: 14px;
+    border-bottom: 1px solid var(--puma-light-gray);
+}
+
+.top-banner-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-right: 20px;
+}
+
+.top-banner-links a {
+    color: var(--puma-black);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Header */
+header {
+    background-color: var(--puma-black);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-puma {
+    margin-right: 30px;
+}
+
+.logo-puma img {
+    height: 30px;
+    width: auto;
+}
+
+/* Navegación principal */
+.navbar1 {
+    flex-grow: 1;
+}
+
+.navbar1 ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 25px;
+}
+
+.navbar1 ul li a {
+    color: var(--puma-white);
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 20px 0;
+    display: block;
+    transition: color 0.3s;
+}
+
+.navbar1 ul li a:hover {
+    color: #ccc;
+}
+
+/* Barra de búsqueda y iconos */
+.navbar2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar2 input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #555;
+    color: var(--puma-white);
+    padding: 5px 0;
+    width: 150px;
+    outline: none;
+}
+
+.navbar2 input::placeholder {
+    color: #999;
+}
+
+.navbar2 i {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.navbar2 i:hover {
+    color: #ccc;
+}
+
+/* Carrusel principal */
+.carousel-item {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    bottom: 100px;
+    max-width: 500px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.carousel-caption h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.carousel-caption .btn {
+    background-color: var(--puma-black);
+    border: none;
+    padding: 10px 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.carousel-caption .btn:hover {
+    background-color: #333;
+}
+
+/* Bloques de categorías */
+.category-block {
+    transition: transform 0.3s;
+    overflow: hidden;
+    border-radius: 5px;
+    position: relative;
+}
+
+.category-block:hover {
+    transform: translateY(-5px);
+}
+
+.category-block img {
+    transition: transform 0.5s;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.category-block:hover img {
+    transform: scale(1.05);
+}
+
+.category-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Sección de nuevos lanzamientos */
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.view-all {
+    color: var(--puma-black);
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.product-card {
+    transition: transform 0.3s;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 0;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    border-radius: 0;
+}
+
+.product-card .card-body {
+    padding: 15px 0;
+}
+
+.product-card .card-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.product-card .text-muted {
+    font-size: 12px;
+}
+
+.product-price {
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+/* Controles del carrusel de productos */
+#newReleasesCarousel .carousel-control-prev,
+#newReleasesCarousel .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background-color: var(--puma-black);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+}
+
+#newReleasesCarousel .carousel-control-prev {
+    left: -20px;
+}
+
+#newReleasesCarousel .carousel-control-next {
+    right: -20px;
+}
+
+#newReleasesCarousel .carousel-control-prev-icon,
+#newReleasesCarousel .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Footer */
+.home-footer {
+    background-color: var(--puma-black);
+    color: var(--puma-white);
+    padding: 50px 0 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 30px;
+    padding-right: 20px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footer-column ul li:hover {
+    text-decoration: underline;
+}
+
+.footer-column strong {
+    display: block;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.subscribe {
+    margin: 20px 0;
+}
+
+.subscribe input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #333;
+    color: var(--puma-white);
+}
+
+.subscribe button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--puma-white);
+    color: var(--puma-black);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscribe button:hover {
+    background-color: #ccc;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons div {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.social-icons div:hover {
+    background-color: #555;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-top: 1px solid #333;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.footer-bottom a {
+    margin-right: 20px;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .navbar1 ul {
+        gap: 15px;
+    }
+    
+    .navbar2 input {
+        width: 120px;
+    }
+    
+    .carousel-item {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 20px;
+    }
+    
+    .logo-puma {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .navbar1 {
+        order: 3;
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    .navbar1 ul {
+        width: max-content;
+    }
+    
+    .navbar2 {
+        margin-left: auto;
+    }
+    
+    .carousel-item {
+        height: 300px;
+    }
+    
+    .carousel-caption {
+        bottom: 50px;
+        padding: 15px;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 1.8rem;
+    }
+    
+    .footer-column {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .top-banner {
+        font-size: 12px;
+    }
+    
+    .top-banner-links {
+        justify-content: center;
+        padding-right: 0;
+    }
+    
+    .navbar2 input {
+        width: 100px;
+    }
+    
+    .carousel-item {
+        height: 250px;
+    }
+    
+    .carousel-caption {
+        bottom: 30px;
+        padding: 10px;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 1.5rem;
+    }
+    
+    .footer-column {
+        flex: 0 0 100%;
+    }
+}
