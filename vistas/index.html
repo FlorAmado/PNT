@@ -342,7 +342,7 @@
             <!-- Form de contacto -->
         </div>
         <div class="footer-contactanos">
-            <form action="https://http.cat/">
+            <form  name="contact_form" action="https://http.cat/" onsubmit="return ValidateAll()" novalidate>
               <h3>Contáctanos</h3>
               <div class="form-row">
                 <div class="form-col">
@@ -381,5 +381,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
             crossorigin="anonymous"></script>
+    <script src="../scripts/validation_scripts.js"></script>
 </body>
 </html>
